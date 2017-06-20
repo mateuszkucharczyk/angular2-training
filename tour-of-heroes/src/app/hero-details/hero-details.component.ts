@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
-class Hero {
+export class Hero {
   id: number;
   name: string;
 }
