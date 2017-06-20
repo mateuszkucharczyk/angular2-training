@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero-details/hero-details.component';
 
 @Component({
   selector: 'mk-app',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+  selectedHero: Hero;
 }

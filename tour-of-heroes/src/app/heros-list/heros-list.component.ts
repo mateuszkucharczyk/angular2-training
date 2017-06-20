@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Hero } from './../hero-details/hero-details.component';
 
 const HEROES: Hero[] = [
@@ -21,9 +21,10 @@ const HEROES: Hero[] = [
 })
 export class HerosListComponent implements OnInit {
   heroes = HEROES;
+  @Output() heroSelected = new EventEmitter<Hero>()
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }

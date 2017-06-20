@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 export class Hero {
@@ -12,10 +12,7 @@ export class Hero {
   styleUrls: ['./hero-details.component.scss']
 })
 export class HeroDetailsComponent implements OnInit {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstrom'
-  };
+  @Input() hero: Hero;
 
   constructor() { }
 
