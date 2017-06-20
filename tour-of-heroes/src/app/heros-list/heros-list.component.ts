@@ -13,9 +13,9 @@ export class HerosListComponent implements OnInit {
   @Output() heroSelected = new EventEmitter<Hero>()
 
   constructor(private heroService: HeroService) {
-    this.heroes = heroService.getHeroes();
   }
 
   ngOnInit() {
+    this.heroes = this.heroService.getHeroes();
   }
 }
