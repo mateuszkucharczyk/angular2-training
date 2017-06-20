@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Hero } from './../hero-details/hero-details.component';
+import { Hero } from '../hero';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },

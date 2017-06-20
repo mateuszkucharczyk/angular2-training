@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from './hero-details/hero-details.component';
+import { Hero } from './hero';
 
 @Component({
   selector: 'mk-app',

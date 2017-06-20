@@ -1,10 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-
-export class Hero {
-  id: number;
-  name: string;
-}
+import { Hero } from '../hero';
 
 @Component({
   selector: 'mk-hero-details',
