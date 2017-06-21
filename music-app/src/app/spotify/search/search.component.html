@@ -3,7 +3,7 @@
   <!--.column-->
 
   <!-- Bulma (and most frameworks) uses 12 columns grid -->
-  <div class="column is-3"> 
+  <div class="column is-3">
     <!--h2.subtitle-->
     <h2 class="subtitle">Bookmarks</h2>
   </div>
@@ -16,5 +16,9 @@
       <!--button.button.is-primary-->
       <button class="button is-primary">find</button>
     </div>
-  </div>  
+
+    <div *ngFor="let show of shows">
+      {{show.name}}
+    </div>
+  </div>
 </div>
