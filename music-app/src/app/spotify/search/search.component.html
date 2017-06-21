@@ -37,8 +37,9 @@
         <!-- [size]="lg" does not work because "lg" is evaluaed as JS expression -->
         <!-- [size]="'lg'" would work but is awkward -->
         <!-- size="lg" alternative syntax is much better -->
-        <ma-poster size="lg" [tvShow]="show"></ma-poster>
-        <button [disabled]="isBookmarked(show)" class="button is-info" type="button" (click)="saveBookmark(show)">save</button>
+        <ma-poster size="lg" [tvShow]="show">
+          <button [disabled]="isBookmarked(show)" class="button is-info" type="button" (click)="saveBookmark(show)">save</button>
+        </ma-poster>
 
         <!--<img [src]="show.image.medium" alt="">
         <h2>{{show.name}}</h2>-->
