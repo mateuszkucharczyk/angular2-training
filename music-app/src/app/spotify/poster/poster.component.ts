@@ -1,12 +1,13 @@
 import { Show } from './../search/spotify.models';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 export type PosterSize = 'md' | 'lg';
 
 @Component({
   selector: 'ma-poster',
   templateUrl: './poster.component.html',
-  styleUrls: ['./poster.component.scss']
+  styleUrls: ['./poster.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated // default - just as reminder
 })
 export class PosterComponent implements OnInit {
   @Input() tvShow: Show;
