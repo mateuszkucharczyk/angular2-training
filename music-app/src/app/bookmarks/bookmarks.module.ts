@@ -9,6 +9,7 @@ import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
     CommonModule
   ],
   declarations: [RemoveBookmarkComponent, AddBookmarkComponent],
-  providers: [BookmarksService]
+  providers: [BookmarksService],
+  exports: [AddBookmarkComponent, RemoveBookmarkComponent]
 })
 export class BookmarksModule { }
