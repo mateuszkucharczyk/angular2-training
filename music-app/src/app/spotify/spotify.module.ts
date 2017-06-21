@@ -1,3 +1,4 @@
+import { TvmazaService } from './tvmaza.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http'
@@ -11,6 +12,7 @@ import { PosterComponent } from './poster/poster.component';
     HttpModule,
     FormsModule
   ],
-  declarations: [SearchComponent, PosterComponent]
+  declarations: [SearchComponent, PosterComponent],
+  providers: [TvmazaService]
 })
 export class SpotifyModule { }
