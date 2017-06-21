@@ -23,6 +23,7 @@
 
     <div class="columns is-multiline">
       <div class="column is-4" *ngFor="let show of shows">
+        <img [src]="show.image.medium" alt="">
         {{show.name}}
       </div>
     </div>
