@@ -38,7 +38,7 @@
         <!-- [size]="'lg'" would work but is awkward -->
         <!-- size="lg" alternative syntax is much better -->
         <ma-poster size="lg" [tvShow]="show"></ma-poster>
-        <button class="button is-info" type="button" (click)="saveBookmark(show)">save</button>
+        <button [disabled]="isBookmarked(show)" class="button is-info" type="button" (click)="saveBookmark(show)">save</button>
 
         <!--<img [src]="show.image.medium" alt="">
         <h2>{{show.name}}</h2>-->

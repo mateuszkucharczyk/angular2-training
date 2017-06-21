@@ -27,6 +27,9 @@ export class SearchComponent implements OnInit {
     this.bs.add(show);
   }
 
+  isBoorkmarked(show: Show): boolean {
+    return this.bs.has(show.id);
+  }
   get bookmarks(): Show[] {
     return this.bs.getAll() as Show[];
   }
