@@ -1,3 +1,5 @@
 <img [src]="imgUrl" alt="">
-<ng-content></ng-content>
+<ng-content select="button"></ng-content>
 <h2 class="subtitle">{{tvShow.name}}</h2>
+<!-- everything which is not a button-->
+<ng-content></ng-content>
