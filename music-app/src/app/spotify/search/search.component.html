@@ -22,7 +22,10 @@
       <!-- two way binding -->
       <!-- name="query" attribute is required by Angular form -->
       <input name="query" [(ngModel)]="query" type="search" class="input">
-      <button class="button is-primary" (click)="search(query)">find</button>
+
+      <!-- default type is 'submit'! So remember to change the type of all other buttons to 'button'! -->
+      <!-- Otherwise first one will be activated on ENTER-->
+      <button type="submit" class="button is-primary" (click)="search(query)">find</button>
     </form>
 
     <div class="columns is-multiline">
