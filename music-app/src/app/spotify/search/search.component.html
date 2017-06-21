@@ -12,9 +12,13 @@
     <h2 class="subtitle">Search for albums</h2>
     <!--.control.field.has-addons  -->
     <div class="control field has-addons">
-      <input type="search" class="input">
+
+      <!-- template local variable with DOM element  #-->
+      <input #queryRef type="search" class="input">
+
       <!--button.button.is-primary-->
-      <button class="button is-primary">find</button>
+      <!-- pass property of DOM element stored in template local variable --git>
+      <button class="button is-primary" (click)="search(queryRef.value)">find</button>
     </div>
 
     <div class="columns is-multiline">
