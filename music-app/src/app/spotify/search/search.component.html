@@ -39,7 +39,8 @@
         <!-- size="lg" alternative syntax is much better -->
         <ma-poster size="lg" [tvShow]="show">
           <h2>not a button</h2>
-          <button [disabled]="isBookmarked(show)" class="button is-info" type="button" (click)="saveBookmark(show)">save</button>
+          <ma-add-bookmark [item]="show"></ma-add-bookmark>
+          <!--<button [disabled]="isBookmarked(show)" class="button is-info" type="button" (click)="saveBookmark(show)">save</button>-->
         </ma-poster>
 
         <!--<img [src]="show.image.medium" alt="">

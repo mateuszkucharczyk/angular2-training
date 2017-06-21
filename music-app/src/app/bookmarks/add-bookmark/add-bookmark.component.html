@@ -1,3 +1,3 @@
-<p>
-  add-bookmark works!
-</p>
+<button [disabled]="isBookmarked(item)" class="button is-info" type="button" (click)="saveBookmark(item)">
+save
+</button>
