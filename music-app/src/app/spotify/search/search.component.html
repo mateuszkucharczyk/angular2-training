@@ -17,8 +17,10 @@
       <button class="button is-primary">find</button>
     </div>
 
-    <div *ngFor="let show of shows">
-      {{show.name}}
+    <div class="columns is-multiline">
+      <div class="column is-4" *ngFor="let show of shows">
+        {{show.name}}
+      </div>
     </div>
   </div>
 </div>
