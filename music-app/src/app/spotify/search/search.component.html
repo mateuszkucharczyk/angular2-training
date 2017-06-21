@@ -6,6 +6,10 @@
   <div class="column is-3">
     <!--h2.subtitle-->
     <h2 class="subtitle">Bookmarks</h2>
+    <div class="columns is-multiline">
+      <!-- 'is-6' ie. '6 out of 12' ie. 1/2  -->
+      <ma-poster class="column is-6" *ngFor="let bookmark of bookmarks" [tvShow]="bookmark" size="md"></ma-poster>
+    </div>
   </div>
 
   <div class="column">
@@ -34,6 +38,8 @@
         <!-- [size]="'lg'" would work but is awkward -->
         <!-- size="lg" alternative syntax is much better -->
         <ma-poster size="lg" [tvShow]="show"></ma-poster>
+        <button class="button is-info" type="button" (click)="saveBookmark(show)">save</button>
+
         <!--<img [src]="show.image.medium" alt="">
         <h2>{{show.name}}</h2>-->
       </div>

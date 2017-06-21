@@ -1,3 +1,4 @@
+import { BookmarksService } from './../../bookmarks/bookmarks.service';
 import { TvmazaService } from './../tvmaza.service';
 import { Show, ShowData } from './spotify.models';
 import { Http } from '@angular/http';
@@ -13,13 +14,21 @@ export class SearchComponent implements OnInit {
   shows: Show[] = [];
   query = 'batman';
 
-  constructor(private tv: TvmazaService) {
+  constructor(private tv: TvmazaService, private bs: BookmarksService) {
     this.search(this.query);
   }
 
   search(query: string) {
     this.tv.findShows(query)
       .subscribe((shows) => this.shows = shows);
+  }
+
+  saveBookmark(show: Show) {
+    this.bs.add(show);
+  }
+
+  get bookmarks(): Show[] {
+    return this.bs.getAll() as Show[];
   }
 
   ngOnInit() {

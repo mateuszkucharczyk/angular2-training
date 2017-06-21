@@ -1,3 +1,4 @@
+import { BookmarksModule } from './../bookmarks/bookmarks.module';
 import { TvmazaService } from './tvmaza.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,7 +11,8 @@ import { PosterComponent } from './poster/poster.component';
   imports: [
     CommonModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    BookmarksModule
   ],
   declarations: [SearchComponent, PosterComponent],
   providers: [TvmazaService]

@@ -1,3 +1,4 @@
+import { BookmarksService } from './bookmarks.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -5,6 +6,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [BookmarksService]
 })
 export class BookmarksModule { }
