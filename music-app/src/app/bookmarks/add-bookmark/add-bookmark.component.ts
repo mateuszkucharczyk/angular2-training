@@ -14,11 +14,11 @@ export class AddBookmarkComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveBookmark(show: Bookmark) {
-    this.bs.add(show);
+  save() {
+    this.bs.add(this.item);
   }
 
-  isBookmarked(item: Bookmark): boolean {
-    return this.bs.has(item.id);
+  isBookmarked(): boolean {
+    return this.bs.has(this.item.id);
   }
 }
