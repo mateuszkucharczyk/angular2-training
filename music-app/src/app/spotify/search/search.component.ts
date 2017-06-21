@@ -27,13 +27,16 @@ export class SearchComponent implements OnInit {
 
     // subscribe() first - get() does not send GET request until anything is subscribed to handle response
     // handle response via callback function
-    this.http.get(apiUrl)
-      .subscribe((resp) => this.shows = (resp.json() as ShowData[]).map(data => data.show));
+    // this.http.get(apiUrl)
+    //   .subscribe((resp) => this.shows = (resp.json() as ShowData[]).map(data => data.show));
     // alternative syntax: map({show} => show)
 
     // This is how we should do it.
     // Handle response by RxJS stream instead callbacks
-    this.http.get(apiUrl).map((resp) => (resp.json() as ShowData[]).map(data => data.show));
+    this.http
+      .get(apiUrl).map((resp) => (resp.json() as ShowData[])
+        .map(data => data.show))
+      .subscribe((shows) => this.shows = shows);
   }
 
   ngOnInit() {
