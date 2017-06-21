@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http'
 import { FormsModule } from '@angular/forms'
 import { SearchComponent } from './search/search.component';
+import { PosterComponent } from './poster/poster.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,6 @@ import { SearchComponent } from './search/search.component';
     HttpModule,
     FormsModule
   ],
-  declarations: [SearchComponent]
+  declarations: [SearchComponent, PosterComponent]
 })
 export class SpotifyModule { }

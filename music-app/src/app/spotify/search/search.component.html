@@ -30,7 +30,9 @@
 
     <div class="columns is-multiline">
       <div class="column is-4" *ngFor="let show of shows">
-        <img [src]="show.image.medium" alt=""> {{show.name}}
+        <ma-poster [tvShow]="show"></ma-poster>
+        <!--<img [src]="show.image.medium" alt="">
+        <h2>{{show.name}}</h2>-->
       </div>
     </div>
   </div>
