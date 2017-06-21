@@ -12,19 +12,21 @@
     <h2 class="subtitle">Search for albums</h2>
     <!--.control.field.has-addons  -->
     <div class="control field has-addons">
+      <!--button.button.is-primary-->
 
       <!-- template local variable with DOM element  #-->
-      <input #queryRef type="search" class="input">
-
-      <!--button.button.is-primary-->
+      <!--<input #queryRef type="search" class="input">-->
       <!-- pass property of DOM element stored in template local variable -->
-      <button class="button is-primary" (click)="search(queryRef.value)">find</button>
+      <!--<button class="button is-primary" (click)="search(queryRef.value)">find</button>-->
+
+      <!-- two way binding -->
+      <input [(ngModel)]="query" type="search" class="input">
+      <button class="button is-primary" (click)="search(query)">find</button>
     </div>
 
     <div class="columns is-multiline">
       <div class="column is-4" *ngFor="let show of shows">
-        <img [src]="show.image.medium" alt="">
-        {{show.name}}
+        <img [src]="show.image.medium" alt=""> {{show.name}}
       </div>
     </div>
   </div>
